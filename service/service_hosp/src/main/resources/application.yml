@@ -1,0 +1,38 @@
+#feign:
+#  sentinel:
+#    enabled: true
+#mybatis-plus:
+#  mapper-locations: classpath:com/chen/com.chen.yygh.yygh/mapper/xml/*.xml
+server:
+  port: 8201
+spring:
+  application:
+    name: service-hosp
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: 6b20fabe-8973-43ba-858e-4dccc9d1b62b
+  #    sentinel:
+#      transport:
+#        dashboard: http://127.0.0.1:8858
+  data:
+    mongodb:
+      auto-index-creation: false
+      uri: mongodb://1.117.206.149:27017/yygh_hosp
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: root
+    url: jdbc:mysql://localhost:3306/yygh_hosp?characterEncoding=utf-8&useSSL=false
+    username: root
+    type: com.alibaba.druid.pool.DruidDataSource
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  profiles:
+    active: dev
+#  rabbitmq:
+#    host: 1.117.206.149
+#    password: as123456+
+#    port: 5672
+#    username: chen

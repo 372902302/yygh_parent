@@ -1,0 +1,18 @@
+server:
+  port: 8202
+spring:
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: 6b20fabe-8973-43ba-858e-4dccc9d1b62b
+  application:
+    name: service-user
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: root
+    url: jdbc:mysql://localhost:3306/yygh_hosp?characterEncoding=utf-8&useSSL=false
+    username: root

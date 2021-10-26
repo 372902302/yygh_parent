@@ -1,0 +1,17 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+
+# Project exclude paths
+/common/common_util/target/
+/common/service_util/target/
+/model/target/
+/service/service-gateway/target/
+/service/service_cmn/target/
+/service/service_hosp/target/
+/service/service_user/target/
