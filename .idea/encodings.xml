@@ -5,7 +5,7 @@
     <file url="file://$PROJECT_DIR$/common/service_util/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hospital-manager/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/model/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/service/service-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service/service_cmn/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service/service_hosp/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service/service_user/src/main/java" charset="UTF-8" />
