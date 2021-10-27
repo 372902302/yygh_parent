@@ -10,11 +10,11 @@
         <module name="common_util" />
         <module name="hospital-manager" />
         <module name="service_user" />
-        <module name="service-gateway" />
         <module name="service_util" />
         <module name="model" />
         <module name="service_hosp" />
         <module name="service_cmn" />
+        <module name="gateway" />
       </profile>
     </annotationProcessing>
   </component>
@@ -22,10 +22,10 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="common" options="-parameters" />
       <module name="common_util" options="-parameters" />
+      <module name="gateway" options="-parameters" />
       <module name="hospital-manager" options="-parameters" />
       <module name="model" options="-parameters" />
       <module name="service" options="-parameters" />
-      <module name="service-gateway" options="-parameters" />
       <module name="service_cmn" options="-parameters" />
       <module name="service_hosp" options="-parameters" />
       <module name="service_user" options="-parameters" />
