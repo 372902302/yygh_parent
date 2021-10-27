@@ -19,7 +19,12 @@ spring:
   data:
     mongodb:
       auto-index-creation: false
-      uri: mongodb://1.117.206.149:27017/yygh_hosp
+#      host: 1.117.206
+#      port: 27017
+#      username: admin
+#      password: as123456+
+#      database: yygh_hosp
+      uri: mongodb://admin:as123456+@1.117.206.149:27017/yygh_hosp
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     password: root
