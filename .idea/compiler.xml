@@ -10,6 +10,7 @@
         <module name="common_util" />
         <module name="hospital-manager" />
         <module name="service_user" />
+        <module name="service-cmn-client" />
         <module name="service_util" />
         <module name="model" />
         <module name="service_hosp" />
@@ -26,6 +27,8 @@
       <module name="hospital-manager" options="-parameters" />
       <module name="model" options="-parameters" />
       <module name="service" options="-parameters" />
+      <module name="service-client" options="-parameters" />
+      <module name="service-cmn-client" options="-parameters" />
       <module name="service_cmn" options="-parameters" />
       <module name="service_hosp" options="-parameters" />
       <module name="service_user" options="-parameters" />

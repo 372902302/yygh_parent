@@ -1,6 +1,8 @@
 package com.chen.yygh.cmn.service.impl;
 
 import cn.hutool.core.bean.BeanUtil;
+import cn.hutool.core.util.ObjectUtil;
+import cn.hutool.core.util.StrUtil;
 import com.alibaba.excel.EasyExcel;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -75,6 +77,37 @@ public class DictServiceImpl extends ServiceImpl<DictMapper, Dict>
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public String getNameByParentDictCodeAndValue(String parentDictCode, String value) {
+        //如果value能唯一定位数据字典，parentDictCode可以传空，例如：省市区的value值能够唯一确定
+        if(StrUtil.isEmpty(parentDictCode)) {
+            Dict dict = dictMapper.selectOne(new QueryWrapper<Dict>().eq("value", value));
+            if(ObjectUtil.isNotNull(dict)) {
+                return dict.getName();
+            }
+        } else {
+            Dict parentDict = dictMapper.selectOne(new QueryWrapper<Dict>().eq("dict_code",parentDictCode));
+            if(ObjectUtil.isNull(parentDict)) {
+                return "";
+            }
+            Dict dict = dictMapper.selectOne(new QueryWrapper<Dict>().eq("parent_id", parentDict.getId()).eq("value", value));
+            if(ObjectUtil.isNotNull(dict)) {
+                return dict.getName();
+            }
+        }
+        return "";
+    }
+
+    @Override
+    public List<Dict> findChildrenByDictcode(String dictCode) {
+        Dict dict = dictMapper.selectOne(new QueryWrapper<Dict>().eq("dict_code", dictCode));
+        if (ObjectUtil.isNull(dict)){
+            return null;
+        }
+        List<Dict> dictList = this.findChildData(dict.getId());
+        return dictList;
     }
 
     //判断id下面是否有子节点
